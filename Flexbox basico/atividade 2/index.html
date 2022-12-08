@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .flexContainer:last-child{margin-top: 2em;}
+    body{margin: 0;padding: 0;}
+    div{height: 50px;width: 50px;}
+    div:nth-child(1){background-color: red; width: 80px;height: 80px;flex-shrink: 1.1;}
+    div:nth-child(2){background-color: blue;order:3;flex-grow: 0;}
+    div:nth-child(3){background-color: green; order:1;}
+    div:nth-child(4){background-color:yellow ; order: -1;flex-shrink: 0;}
+    div:nth-child(5){background-color: pink;}
+    div:nth-child(6){background-color: black;}
+    div:nth-child(7){background-color: orange;}
+    div:nth-child(8){background-color: silver; }
+
+    body{
+        height: 100vh;
+        width: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flexContainer{
+        height: 50%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-around;
+
+    }
+
+    .flexItem{
+        display: block;
+        position: relative;
+        flex: 0  60px;
+    }
+</style>
+<body>
+    <main class="flexContainer">
+
+        <div class="flexItem primeiraRow"></div>
+        <div class="flexItem primeiraRow"></div>
+        <div class="flexItem primeiraRow"></div>
+        <div class="flexItem primeiraRow"></div>
+    
+        <!-- <div class="flexItem segundaRow"></div>
+        <div class="flexItem segundaRow"></div>
+        <div class="flexItem segundaRow"></div>
+        <div class="flexItem segundaRow"></div> -->
+    
+    </main>    
+</body>
+</html>
+
