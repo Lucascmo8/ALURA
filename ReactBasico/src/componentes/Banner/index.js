@@ -6,7 +6,6 @@ return (
     <header className="banner">
         <img src="/imagens/banner.png" alt="O banner Principal" ></img>
     </header>
-    <h1>Lucas teste</h1>
     </>
 )
 }
