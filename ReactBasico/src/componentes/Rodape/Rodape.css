@@ -1,0 +1,27 @@
+.rodape{
+    background-color: rgba(98, 120, 247, 1) ;
+    position: relative;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    height: 213px;
+    width: 100%;
+    background: url(../../../public/imagens/fundo.png) no-repeat rgba(98, 120, 247, 1) center /cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.rodape > .redesSocias{
+    display:  flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.rodape .recado{
+    color: white;
+}
