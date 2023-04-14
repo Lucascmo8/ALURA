@@ -1,0 +1,9 @@
+validação de formularios
+
+escolher o tipo do  input -> escolhor o  input é importante, pois, o proprio html ja cria uma formatação de validação dos dados.
+
+minlength e maxlength -> serve para ditar qual o quantidade minima e maxima de caracteres
+
+required -> serve para garantir que o usuario ira preencher esse campo, já que o html não autoriza o progresso sem o input estar ok
+
+pattern e regex -> servem juntas para padronizar e validar os dados de um input

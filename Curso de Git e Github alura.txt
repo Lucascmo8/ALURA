@@ -1,0 +1,43 @@
+entrar na pasta e digitar na git log: mostrar todos os commits realizados
+
+git pull: serve para puxar atualizações para o computador
+
+git commit : serve para fazer um comentario da modificações : para fazer basta -> git commit nomeDoArquivo.js -m "comentario super util"
+
+git push: serve para enviar todas as modificações feitas nos arquivos
+
+git restore --source : serve para voltar em versões antigas
+
+
+------------------------------------------------------------
+tipos de git log:
+
+git log --online -> para reduzir  o numero de informações 
+
+git log -p -> para mostrat mais informações sobre autor do commit
+
+git log --author="Lucas Costa" -> podemos ver todos os commit de um autor
+
+git log --since=1.month.ago --until=1.day.ago -> serve para pesquisarmos por data quais commit foram feitos
+
+git log --pretty="format:%h %s" serve para conseguir personalizar como aparecera todo o histórico de commits
+
+------------------------------------------------------------
+tipos de git clone:
+
+git clone https:LinkDoRepositório-> copiará toda a pasta do repositório
+
+git clone <repositorio> <meu-projeto-clone> -> O repositório localizado em repositorio é clonado para uma pasta chamada meu-projeto-clone.
+
+git clone -branch new_feature <repositorio>  -> O exemplo acima clonaria apenas a branch new_feature de repositorio
+
+------------------------------------------------------------
+
+git add . -> para adicionar todas as criações de as paginas
+git add nomeDoArquivo.js -> para adiconar uma página expecifica
+
+git checkout -b NomeDaRamificação que será criada
+
+git switch NomeDaRamificação que vamos trabalhar para troca para qual area estamos desenvolvendo
+
+** git merge nomeDaBranch -> serve para mesclar um repositório
