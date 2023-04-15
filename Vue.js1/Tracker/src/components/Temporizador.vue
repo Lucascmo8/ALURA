@@ -2,8 +2,8 @@
     <div class="cronometro">
         <Cronometro :tempoEmSegundos="tempoEmSegundos"/>
         <div class="botoesCronometros">
-            <button @click="start" :disabled="playDisabled"><i class="uil uil-stopwatch"></i> Play</button>
-            <button @click="stop"><i class="uil uil-stopwatch-slash"></i> Stop</button>
+            <button @click="start" v-if="!playDisabled"  :disabled="isAvailable"><i class="uil uil-stopwatch"></i> Play</button>
+            <button @click="stop" v-else><i class="uil uil-stopwatch-slash"></i> Stop</button>
         </div>
     </div>
 </template>
@@ -12,6 +12,7 @@
 import Cronometro from './Cronometro.vue';
     
     export default{
+        name:'Temporizador',
         data(){
             return{
                 tempoEmSegundos:0,
@@ -19,6 +20,8 @@ import Cronometro from './Cronometro.vue';
                 playDisabled:false,
             }
         },
+        props:{isAvailable:Boolean}
+        ,
         components:{
             Cronometro,
         }
@@ -33,14 +36,17 @@ import Cronometro from './Cronometro.vue';
             stop(){
                 clearInterval(this.cronometro)
                 this.playDisabled = false
+                this.$emit('EnviarOTempo',this.tempoEmSegundos)
+                this.tempoEmSegundos = 0
             }
         },
+        emits:['EnviarOTempo']
     }
 </script>
 
 <style scoped>
     div.cronometro{
-        @apply p-2 bg-white gap-2 h-24 flex flex-col justify-between
+        @apply p-2 bg-white gap-2 h-24 flex flex-col sm:flex-row justify-between sm:items-center
     }
 
     div.botoesCronometros{
@@ -52,6 +58,6 @@ import Cronometro from './Cronometro.vue';
     }
 
     button:disabled{
-        @apply bg-gray-400  text-white
+        @apply bg-red-600 text-white cursor-not-allowed
     }
 </style>

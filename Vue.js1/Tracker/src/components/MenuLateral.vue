@@ -12,6 +12,7 @@
 
 <style scoped>
     header{
+        
         @apply w-full h-auto text-white p-2 sm:p-2 sm:max-h-screen;
     }
 

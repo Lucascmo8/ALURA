@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="">
-        <input type="text" class="input" placeholder="Qual tarefa você deseja iniciar?">
-        <Temporizador />
+        <input type="text" class="input" placeholder="Qual tarefa você deseja iniciar?" v-model="nomeDaTarefa" required>
+        <Temporizador @EnviarOTempo="finalizarTarefa" :isAvailable="nomeDaTarefa.length == 0"/>
     </form>
 </template>
 
@@ -10,8 +10,21 @@
 
     export default{
         name:"Formulario",
+        data(){
+            return{
+                nomeDaTarefa:'',
+            }
+        },
+        emits:['EnviarTarefa']
+        ,
         components:{
             Temporizador,
+        },
+        methods:{
+            finalizarTarefa(tempoDaTarefa){
+                this.$emit('EnviarTarefa',{titulo:this.nomeDaTarefa,duracao:tempoDaTarefa})
+                this.nomeDaTarefa = ''
+            }
         }
     }
 </script>
