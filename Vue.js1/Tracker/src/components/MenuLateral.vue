@@ -17,6 +17,6 @@
     }
 
     h1{
-        @apply text-lg sm:text-xl
+        @apply text-lg sm:text-4xl text-center
     }
 </style>

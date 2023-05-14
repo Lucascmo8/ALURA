@@ -34,7 +34,7 @@ git clone -branch new_feature <repositorio>  -> O exemplo acima clonaria apenas 
 ------------------------------------------------------------
 
 git add . -> para adicionar todas as criações de as paginas
-git add nomeDoArquivo.js -> para adiconar uma página expecifica
+git add nomeDoArquivo.js -> para adicionar uma página expecifica
 
 git checkout -b NomeDaRamificação que será criada
 
