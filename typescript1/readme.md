@@ -16,4 +16,15 @@
     <li>Mais configurações do compilador tsc
     <li>Retorno de método explícito
     <li>Conversão de valores da interface do usuário
+    <li>Modelagem da classe Negociacoes
+    <li>Utilização de Generics
+    <li>Revisão sobre encapsulamento
+    <li>Questões de mutabilidade e como solucioná-la
+    <li>O tipo ReadonlyArray
+    <li>Adição de negociações em nossa lista
+    <li>Nova maneira de declaração de array com generics
+    <li>O tipo ReadonlyArray
+    <li>O modificador readonly
+    <li>Getters vs propriedades públicas em modo de leitura
+    <li>Programação defensiva
 </ul>
